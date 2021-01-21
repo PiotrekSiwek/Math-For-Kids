@@ -4,8 +4,12 @@ Application for first class pupils to train math (adding, subtraction, multiplic
 Kids can choose operations to train and draw numbers. The last circle is a place for answer. Button next to it is to check if the answer is correct.
 
 ## Created with:
-- JavaScript (OOP), RWD, Sass, NPM, and Webpack
+- JavaScript (OOP), 
+- RWD, 
+- Sass, 
+- NPM, 
+- Webpack
 
-## Instaltion
+## Installation
 - npm i,
 - npm start
