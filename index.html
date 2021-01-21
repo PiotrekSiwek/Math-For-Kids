@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Matematyka</title>
+
+    <link rel="stylesheet" href="build/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Aclonica&family=Love+Ya+Like+A+Sister&family=Permanent+Marker&family=Rock+Salt&display=swap"
+          rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300;400&family=Roboto:wght@500&display=swap"
+          rel="stylesheet">
+    <script src="https://kit.fontawesome.com/de5f29758e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<main class="container math">
+    <h1 class="math-title">Matematyka</h1>
+    <div class="wrap">
+        <section class="counting">
+            <div class="math-calculator">
+                <div class="math-calculator__numberA circle">2</div>
+                <div class="math-calculator__sign circle">+</div>
+                <div class="math-calculator__numberB circle">4</div>
+                <div class="math-calculator__isequal circle">=</div>
+                <input class="math-calculator__result circle" type="number" required minlength="1" maxlength="2">
+                <button class="button-check"><i class="fas fa-check"></i></button>
+            </div>
+        </section>
+
+        <section class="operations">
+            <div class="math-buttons">
+                <div class="math-buttons-operations">
+                    <button class="math-buttons__plus btn">+</button>
+                    <button class="math-buttons__minus btn">-</button>
+                    <button class="math-buttons__multiply btn">*</button>
+                </div>
+                <div class="refresh">
+                    <button class="refresh__button btn"><i class="fas fa-redo"></i></button>
+                </div>
+            </div>
+            <div class="picture">
+                <img srcset="images/MathRules-high.png 180w,images/MathRules-low.png 83w"
+                     sizes="(max-width: 430px) 83px, 183px"
+                     src="images/MathRules-high.png"
+                     alt="math girl">
+                <div class="picture__text"><span>Brawo!</span></div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="build/out.js"></script>
+</body>
+</html>

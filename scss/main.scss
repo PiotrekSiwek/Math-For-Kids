@@ -1,0 +1,283 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url('../images/tab3.jpg') no-repeat;
+  background-size: cover;
+}
+.container {
+  width: 100%;
+  padding: 0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.math-title {
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: 'Love Ya Like A Sister', cursive;
+}
+
+.counting {
+  margin-top: 30px;
+}
+
+.math-calculator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background: #e5bd10;
+  border-radius: 50%;
+  border: 4px solid honeydew;
+  box-shadow: 3px 2px 23px 3px rgba(0, 0, 0, 0.75);
+  margin: 20px auto;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Londrina Solid', cursive;
+  font-weight: 300;
+}
+
+.roll {
+  animation: rolling 2s 0.6s linear;
+}
+
+.rollAll {
+  animation: rolling2 3s 0s ease-in-out;
+}
+
+.math-calculator__result {
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.button-check {
+  margin-left: 40px;
+  cursor: pointer;
+  padding: 15px 25px;
+  border-radius: 8px;
+  background: #e58a35;
+  color: white;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(0.9);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.operations {
+  display: flex;
+  align-items: center;
+}
+
+.math-buttons {
+  padding: 20px 0;
+  width: 80%;
+}
+
+.math-buttons-operations {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+.btn {
+  padding: 15px 30px;
+  border-radius: 20px;
+  background: #54544b;
+  border: 2px solid white;
+  color: white;
+  font-size: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
+  cursor: pointer;
+  box-shadow: 3px 2px 23px 3px rgba(0, 0, 0, 0.75);
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(0.95);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.refresh {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+}
+
+.refresh__button {
+  font-size: 20px;
+}
+
+.picture {
+  position: relative;
+}
+
+.picture__text {
+  width: 45%;
+  padding: 10px;
+  background: white;
+  border-radius: 10px;
+  position: absolute;
+  top: 5%;
+  left: -40%;
+  font-family: 'Love Ya Like A Sister', cursive;
+  font-weight: bolder;
+  transition: 1s;
+  opacity: 0;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: white;
+    position: absolute;
+    transform: translate(170%) rotate(45deg);
+  }
+}
+
+.show {
+  opacity: 1;
+}
+
+@keyframes rolling {
+  0% {
+    transform: rotate(0turn) scale(1.0);
+  }
+  50% {
+    transform: rotate(4turn) scale(1.5);
+  }
+  100% {
+    transform: rotate(8turn) scale(1.0);
+  }
+}
+
+@keyframes rolling2 {
+  0% {
+    transform: rotate(0turn);
+  }
+  100% {
+    transform: rotate(12turn);
+  }
+}
+
+@media (max-width: 750px) {
+  .math-calculator {
+    flex-direction: column;
+    align-items: center;
+  }
+  .math-buttons-operations {
+    flex-direction: column;
+  }
+  .wrap {
+    display: flex;
+    justify-content: space-around;
+  }
+  .operations {
+    flex-direction: column;
+  }
+  .btn {
+    margin-top: 20px;
+  }
+  .counting {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+  .button-check {
+    margin-left: 0;
+    width: 100%;
+  }
+  .refresh {
+    padding-top: 0;
+  }
+  .picture {
+    margin-top: 40px;
+    padding-top: 60px;
+    margin-left: 20px;
+  }
+  .math-buttons {
+    padding: 0;
+  }
+  .math-title {
+    margin-top: 15px;
+  }
+  .picture__text {
+    top: 3%;
+    left: 20%;
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  body {
+    background: url('../images/tab3mini.jpg') no-repeat;
+  }
+  .counting {
+    margin-top: 20px;
+  }
+  .math-title {
+    font-size: 40px;
+  }
+  .circle {
+    width: 70px;
+    height: 70px;
+    margin: 12px;
+  }
+  .btn {
+    padding: 10px 15px;
+    font-size: 20px;
+    width: 70%
+  }
+  .math-buttons-operations {
+    align-items: center;
+  }
+  .button-check {
+    margin-top: 15px;
+    margin-bottom: 0;
+  }
+  .picture__text {
+    width: 80%;
+  }
+}
