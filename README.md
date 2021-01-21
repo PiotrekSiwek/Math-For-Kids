@@ -5,7 +5,6 @@ Kids can choose operations to train and draw numbers. The last circle is a place
 
 ## Created with:
 - JavaScript (OOP), RWD, Sass, NPM, and Webpack
-- npm start
 
 ## Instaltion
 - npm i,
